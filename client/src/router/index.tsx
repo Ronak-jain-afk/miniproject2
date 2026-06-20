@@ -10,6 +10,9 @@ import { SubjectsPage } from '../pages/subjects/page';
 import { SectionsPage } from '../pages/sections/page';
 import { StudentsPage } from '../pages/students/page';
 import { FacultyPage } from '../pages/faculty/page';
+import { TakeAttendancePage } from '../pages/attendance/take-attendance';
+import { SessionsPage } from '../pages/attendance/sessions';
+import { StudentAttendancePage } from '../pages/attendance/student-view';
 import { ProtectedRoute } from './protected-route';
 
 export const router = createBrowserRouter([
@@ -44,6 +47,8 @@ export const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <div>Faculty Dashboard</div> },
+      { path: 'attendance', element: <TakeAttendancePage /> },
+      { path: 'sessions', element: <SessionsPage /> },
     ],
   },
   {
@@ -55,6 +60,7 @@ export const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <div>Student Dashboard</div> },
+      { path: 'attendance', element: <StudentAttendancePage /> },
     ],
   },
   {

@@ -10,6 +10,8 @@ export const facultyRoutes = Router();
 facultyRoutes.use(authenticate);
 
 facultyRoutes.get('/', facultyController.getAll);
+facultyRoutes.get('/me', facultyController.getMyProfile);
+facultyRoutes.get('/me/subjects', facultyController.getMySubjects);
 facultyRoutes.get('/:id', validate({ params: facultyParamsSchema }), facultyController.getById);
 facultyRoutes.post('/', authorize('admin'), validate({ body: createFacultySchema }), facultyController.create);
 facultyRoutes.put('/:id', authorize('admin'), validate({ params: facultyParamsSchema, body: updateFacultySchema }), facultyController.update);

@@ -30,3 +30,14 @@ export async function getWorkload(req: Request, res: Response) {
   const workload = await facultyService.getWorkload(req.params.id);
   res.json({ data: workload });
 }
+
+export async function getMyProfile(req: Request, res: Response) {
+  const faculty = await facultyService.getByUserId(req.user!.userId);
+  res.json({ data: faculty });
+}
+
+export async function getMySubjects(req: Request, res: Response) {
+  const faculty = await facultyService.getByUserId(req.user!.userId);
+  const subjects = await facultyService.getAssignedSubjects(faculty._id.toString());
+  res.json({ data: subjects });
+}

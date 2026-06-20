@@ -15,6 +15,7 @@ import { subjectRoutes } from './modules/subjects/subject.routes';
 import { sectionRoutes } from './modules/sections/section.routes';
 import { studentRoutes } from './modules/students/student.routes';
 import { facultyRoutes } from './modules/faculty/faculty.routes';
+import { attendanceRoutes } from './modules/attendance/attendance.routes';
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use('/api/subjects', subjectRoutes);
 app.use('/api/sections', sectionRoutes);
 app.use('/api/students', studentRoutes);
 app.use('/api/faculty', facultyRoutes);
+app.use('/api/attendance', attendanceRoutes);
 
 app.use(errorHandler);
 
