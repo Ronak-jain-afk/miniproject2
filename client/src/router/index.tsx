@@ -8,6 +8,8 @@ import { CoursesPage } from '../pages/courses/page';
 import { SemestersPage } from '../pages/semesters/page';
 import { SubjectsPage } from '../pages/subjects/page';
 import { SectionsPage } from '../pages/sections/page';
+import { StudentsPage } from '../pages/students/page';
+import { FacultyPage } from '../pages/faculty/page';
 import { ProtectedRoute } from './protected-route';
 
 export const router = createBrowserRouter([
@@ -29,6 +31,8 @@ export const router = createBrowserRouter([
       { path: 'semesters', element: <SemestersPage /> },
       { path: 'subjects', element: <SubjectsPage /> },
       { path: 'sections', element: <SectionsPage /> },
+      { path: 'students', element: <StudentsPage /> },
+      { path: 'faculty', element: <FacultyPage /> },
     ],
   },
   {

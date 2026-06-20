@@ -13,6 +13,8 @@ import { courseRoutes } from './modules/courses/course.routes';
 import { semesterRoutes } from './modules/semesters/semester.routes';
 import { subjectRoutes } from './modules/subjects/subject.routes';
 import { sectionRoutes } from './modules/sections/section.routes';
+import { studentRoutes } from './modules/students/student.routes';
+import { facultyRoutes } from './modules/faculty/faculty.routes';
 
 const app = express();
 
@@ -33,6 +35,8 @@ app.use('/api/courses', courseRoutes);
 app.use('/api/semesters', semesterRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/sections', sectionRoutes);
+app.use('/api/students', studentRoutes);
+app.use('/api/faculty', facultyRoutes);
 
 app.use(errorHandler);
 
