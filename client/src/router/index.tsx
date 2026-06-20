@@ -15,6 +15,7 @@ import { TakeAttendancePage } from '../pages/attendance/take-attendance';
 import { FacultyDashboardPage } from '../pages/analytics/faculty-dashboard';
 import { StudentDashboardPage } from '../pages/analytics/student-dashboard';
 import { AdminDashboardPage } from '../pages/analytics/admin-dashboard';
+import { ReportsPage } from '../pages/reports/page';
 import { SessionsPage } from '../pages/attendance/sessions';
 import { StudentAttendancePage } from '../pages/attendance/student-view';
 import { ProtectedRoute } from './protected-route';
@@ -41,6 +42,7 @@ export const router = createBrowserRouter([
       { path: 'students', element: <StudentsPage /> },
       { path: 'faculty', element: <FacultyPage /> },
       { path: 'rules', element: <RulesPage /> },
+      { path: 'reports', element: <ReportsPage /> },
     ],
   },
   {

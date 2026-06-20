@@ -18,6 +18,7 @@ import { facultyRoutes } from './modules/faculty/faculty.routes';
 import { attendanceRoutes } from './modules/attendance/attendance.routes';
 import { ruleRoutes } from './modules/rules/rule.routes';
 import { analyticsRoutes } from './modules/analytics/analytics.routes';
+import { reportRoutes } from './modules/reports/reports.routes';
 
 const app = express();
 
@@ -43,6 +44,7 @@ app.use('/api/faculty', facultyRoutes);
 app.use('/api/attendance', attendanceRoutes);
 app.use('/api/rules', ruleRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/reports', reportRoutes);
 
 app.use(errorHandler);
 
