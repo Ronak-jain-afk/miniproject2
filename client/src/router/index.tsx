@@ -12,6 +12,9 @@ import { StudentsPage } from '../pages/students/page';
 import { FacultyPage } from '../pages/faculty/page';
 import { RulesPage } from '../pages/rules/page';
 import { TakeAttendancePage } from '../pages/attendance/take-attendance';
+import { FacultyDashboardPage } from '../pages/analytics/faculty-dashboard';
+import { StudentDashboardPage } from '../pages/analytics/student-dashboard';
+import { AdminDashboardPage } from '../pages/analytics/admin-dashboard';
 import { SessionsPage } from '../pages/attendance/sessions';
 import { StudentAttendancePage } from '../pages/attendance/student-view';
 import { ProtectedRoute } from './protected-route';
@@ -29,7 +32,7 @@ export const router = createBrowserRouter([
       </ProtectedRoute>
     ),
     children: [
-      { index: true, element: <div>Admin Dashboard</div> },
+      { index: true, element: <AdminDashboardPage /> },
       { path: 'departments', element: <DepartmentsPage /> },
       { path: 'courses', element: <CoursesPage /> },
       { path: 'semesters', element: <SemestersPage /> },
@@ -48,7 +51,7 @@ export const router = createBrowserRouter([
       </ProtectedRoute>
     ),
     children: [
-      { index: true, element: <div>Faculty Dashboard</div> },
+      { index: true, element: <FacultyDashboardPage /> },
       { path: 'attendance', element: <TakeAttendancePage /> },
       { path: 'sessions', element: <SessionsPage /> },
     ],
@@ -61,7 +64,7 @@ export const router = createBrowserRouter([
       </ProtectedRoute>
     ),
     children: [
-      { index: true, element: <div>Student Dashboard</div> },
+      { index: true, element: <StudentDashboardPage /> },
       { path: 'attendance', element: <StudentAttendancePage /> },
     ],
   },
