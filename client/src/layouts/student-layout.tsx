@@ -1,6 +1,7 @@
 import { Outlet, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../stores/auth-context';
 import { Button } from '../components/ui/button';
+import { NotificationBell } from '../components/notification-bell';
 
 export function StudentLayout() {
   const { user, logout } = useAuth();
@@ -26,6 +27,9 @@ export function StudentLayout() {
         </div>
       </aside>
       <main className="flex-1 p-6">
+        <div className="flex justify-end mb-4">
+          <NotificationBell />
+        </div>
         <Outlet />
       </main>
     </div>

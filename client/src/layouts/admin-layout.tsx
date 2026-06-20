@@ -1,6 +1,7 @@
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../stores/auth-context';
 import { Button } from '../components/ui/button';
+import { NotificationBell } from '../components/notification-bell';
 import { cn } from '../lib/utils';
 
 const navItems = [
@@ -14,6 +15,7 @@ const navItems = [
   { to: '/admin/faculty', label: 'Faculty' },
   { to: '/admin/rules', label: 'Attendance Rules' },
   { to: '/admin/reports', label: 'Reports' },
+  { to: '/admin/audit-logs', label: 'Audit Logs' },
 ];
 
 export function AdminLayout() {
@@ -49,6 +51,9 @@ export function AdminLayout() {
         </div>
       </aside>
       <main className="flex-1 p-6 overflow-auto">
+        <div className="flex justify-end mb-4">
+          <NotificationBell />
+        </div>
         <Outlet />
       </main>
     </div>
