@@ -3,6 +3,11 @@ import { LoginPage } from '../pages/auth/login';
 import { AdminLayout } from '../layouts/admin-layout';
 import { FacultyLayout } from '../layouts/faculty-layout';
 import { StudentLayout } from '../layouts/student-layout';
+import { DepartmentsPage } from '../pages/departments/page';
+import { CoursesPage } from '../pages/courses/page';
+import { SemestersPage } from '../pages/semesters/page';
+import { SubjectsPage } from '../pages/subjects/page';
+import { SectionsPage } from '../pages/sections/page';
 import { ProtectedRoute } from './protected-route';
 
 export const router = createBrowserRouter([
@@ -19,6 +24,11 @@ export const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <div>Admin Dashboard</div> },
+      { path: 'departments', element: <DepartmentsPage /> },
+      { path: 'courses', element: <CoursesPage /> },
+      { path: 'semesters', element: <SemestersPage /> },
+      { path: 'subjects', element: <SubjectsPage /> },
+      { path: 'sections', element: <SectionsPage /> },
     ],
   },
   {

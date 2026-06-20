@@ -8,6 +8,11 @@ import { env } from './config/env';
 import { generalLimiter } from './middleware/rateLimiter';
 import { errorHandler } from './middleware/errorHandler';
 import { authRoutes } from './modules/auth/auth.routes';
+import { departmentRoutes } from './modules/departments/department.routes';
+import { courseRoutes } from './modules/courses/course.routes';
+import { semesterRoutes } from './modules/semesters/semester.routes';
+import { subjectRoutes } from './modules/subjects/subject.routes';
+import { sectionRoutes } from './modules/sections/section.routes';
 
 const app = express();
 
@@ -23,6 +28,11 @@ app.get('/api/health', (_req, res) => {
 });
 
 app.use('/api/auth', authRoutes);
+app.use('/api/departments', departmentRoutes);
+app.use('/api/courses', courseRoutes);
+app.use('/api/semesters', semesterRoutes);
+app.use('/api/subjects', subjectRoutes);
+app.use('/api/sections', sectionRoutes);
 
 app.use(errorHandler);
 
