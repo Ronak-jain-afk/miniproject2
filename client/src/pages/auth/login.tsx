@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../stores/auth-context';
 import { Button } from '../../components/ui/button';
@@ -13,11 +13,11 @@ export function LoginPage() {
   const { login, user } = useAuth();
   const navigate = useNavigate();
 
-  if (user) {
-    const target = `/${user.role}`;
-    navigate(target, { replace: true });
-    return null;
-  }
+  useEffect(() => {
+    if (user) {
+      navigate(`/${user.role}`, { replace: true });
+    }
+  }, [user, navigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
