@@ -12,6 +12,7 @@ const navItems = [
   { to: '/admin/sections', label: 'Sections' },
   { to: '/admin/students', label: 'Students' },
   { to: '/admin/faculty', label: 'Faculty' },
+  { to: '/admin/rules', label: 'Attendance Rules' },
   { to: '/admin/reports', label: 'Reports' },
 ];
 

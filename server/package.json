@@ -25,6 +25,7 @@
     "mongoose": "^8.6.0",
     "morgan": "^1.10.0",
     "multer": "^2.2.0",
+    "node-cron": "^4.4.1",
     "pino": "^9.4.0",
     "zod": "^3.23.8"
   },
@@ -37,6 +38,7 @@
     "@types/morgan": "^1.9.9",
     "@types/multer": "^2.1.0",
     "@types/node": "^22.5.0",
+    "@types/node-cron": "^3.0.11",
     "@types/supertest": "^6.0.2",
     "eslint": "^9.9.1",
     "mongodb-memory-server": "^10.0.0",

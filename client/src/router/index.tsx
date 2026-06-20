@@ -10,6 +10,7 @@ import { SubjectsPage } from '../pages/subjects/page';
 import { SectionsPage } from '../pages/sections/page';
 import { StudentsPage } from '../pages/students/page';
 import { FacultyPage } from '../pages/faculty/page';
+import { RulesPage } from '../pages/rules/page';
 import { TakeAttendancePage } from '../pages/attendance/take-attendance';
 import { SessionsPage } from '../pages/attendance/sessions';
 import { StudentAttendancePage } from '../pages/attendance/student-view';
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
       { path: 'sections', element: <SectionsPage /> },
       { path: 'students', element: <StudentsPage /> },
       { path: 'faculty', element: <FacultyPage /> },
+      { path: 'rules', element: <RulesPage /> },
     ],
   },
   {
